@@ -1,4 +1,4 @@
-# ⚡ Muhammad Akmal Wildannov - Personal Portfolio (Neo-Brutalism Style)
+#Muhammad Akmal Wildannov - Personal Portfolio
 
 Selamat datang di repositori portofolio pribadi saya. Website ini dirancang dengan gaya **Neo-Brutalism** yang mencerminkan perpaduan antara fungsionalitas pemrograman (Flutter/Dart) dan estetika desain UI/UX yang berani, kontras, dan ekspresif.
 
