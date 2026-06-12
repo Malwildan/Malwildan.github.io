@@ -1,58 +1,183 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>My CV</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Akmal Wildannov | Portfolio</title>
+    <style>
+        /* Neo-Brutalism styling relies on system/bold fonts, stark contrast, and hard shadows */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&display=swap');
+        
+        body {
+            background-color: #f4f4f0;
+            color: #000;
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* The signature neo-brutalist card */
+        .card {
+            background: #fff;
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px #000;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px #000;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0 0 1rem 0;
+            background: #ffde59;
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border: 4px solid #000;
+            box-shadow: 4px 4px 0 #000;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-top: 0;
+            border-bottom: 4px solid #000;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Bold aesthetic tags for skills */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: #ff5757;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: 3px solid #000;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 4px 4px 0 #000;
+        }
+        .tag.blue { background: #5ce1e6; color: #000; }
+        .tag.green { background: #7ed957; color: #000; }
+        .tag.purple { background: #cb6ce6; color: #fff; }
+
+        /* Grid layout for projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            border: 4px solid #000;
+            padding: 1.5rem;
+            box-shadow: 6px 6px 0 #000;
+        }
+        
+        /* Individual project colors */
+        .bg-pink { background-color: #ffb3ba; }
+        .bg-green { background-color: #baffc9; }
+        .bg-blue { background-color: #bae1ff; }
+        .bg-yellow { background-color: #ffffba; }
+
+        .btn {
+            background: #000;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-block;
+            border: 3px solid #000;
+            margin-top: 2rem;
+            transition: all 0.2s;
+        }
+        
+        .btn:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 6px 6px 0 #000;
+            transform: translate(-2px, -2px);
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        
+        <header class="card" style="background-color: #ccff00;">
             <h1>Muhammad Akmal Wildannov</h1>
-            <div class="contact-info">
-                <p>Email: akmalwildan@student.ub.ac.id</p>
-                <p>Phone: +6289680560137</p>
-                <p>Location: Malang, Indonesia</p>
+            <p style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0;">Information Systems Student @ Universitas Brawijaya</p>
+            <div class="tag-container">
+                <span class="tag blue">Flutter & Dart</span>
+                <span class="tag">UI/UX Design</span>
+                <span class="tag green">Future Data Scientist</span>
+                <span class="tag purple">Figma</span>
             </div>
         </header>
 
-        <section>
-            <h2>Professional Summary</h2>
-            <p>Im a full stack programmer omg gilak</p>
+        <section class="card">
+            <h2>System.out.println("Hello, World!");</h2>
+            <p>I'm a 19-year-old developer based in Java, Indonesia, currently studying at FILKOM. I specialize in building robust mobile applications using Flutter and clean architecture, heavily focusing on striking UI/UX design. When I'm not aiming for a spot in the Basic Computing Community (BCC) or designing in Figma, I'm analyzing data and building the foundation to become a Data Scientist by 2029.</p>
         </section>
 
-        <section>
-            <h2>Experience</h2>
-            <div class="job">
-                <h3 class="job-title">Junior Staff</h3>
-                <div class="job-company">KBMDSI</div>
-                <div class="job-date">October 2025 - December 2025</div>
-                <div class="job-description">
-                    <ul>
-                        <li>Graphic Designer - SINAU BARENG</li>
-                        <li>Graphic Designer - DEMISIONER</li>
-                    </ul>
-                </div>
+        <div class="project-grid">
+            
+            <div class="project-card bg-pink">
+                <h3>Reclaim App</h3>
+                <p>A habit modification and accountability application built with Flutter. Features include a dedicated Panic Button, streak counters, and seamless Supabase integration for backend data analytics.</p>
             </div>
-        </section>
 
-        <section>
-            <h2>Education</h2>
-            <div class="education">
-                <h3 class="school-name">Information Systems</h3>
-                <div class="education-details">
-                    <div>Brawijaya University</div>
-                    <div>Graduated: 2029</div>
-                </div>
+            <div class="project-card bg-green">
+                <h3>AgriWise & SmartProbe</h3>
+                <p>An integrated smart agriculture system developed for research. Combines hardware sensors (SmartProbe) with a mobile app (AgriWise), utilizing IoT architecture and Machine Learning data models.</p>
             </div>
-        </section>
 
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>Graphic Designer</li>
-                <li>UI/UX Designer</li>
-                <li>Mobile Developer</li>
-            </ul>
-        </section>
+            <div class="project-card bg-blue">
+                <h3>Multiplatform Inventory</h3>
+                <p>A robust multiplatform inventory management application built natively in Flutter, utilizing Clean Architecture standards for maximum scalability and maintainability.</p>
+            </div>
+
+            <div class="project-card bg-yellow">
+                <h3>Student Arcade</h3>
+                <p>A centralized profile information system designed to organize and streamline student data efficiently.</p>
+            </div>
+
+        </div>
+
+        <div style="text-align: center;">
+            <a href="https://github.com/Malwildan" class="btn">View My GitHub</a>
+        </div>
+
     </div>
 </body>
 </html>
